@@ -41,19 +41,20 @@ class Controls {
         'Metronome', this.toggleMetronome.bind(this))
     this._container.appendChild(document.createElement('br'))
 
+
     // CALL
     // Call Bars
-    this._addTitle('Call Bars:')
+    this._addTitle('Call')
     this._addDivider(50)
     this._callBarButtons = []
     this._callBarButtons.push(
 	this._addButton('Auto', this.setCallBars.bind(this, 0)))
-
+/*
     for (var i = 1; i <= 8; i++) {
       this._callBarButtons.push(
           this._addButton(i, this.setCallBars.bind(this, i)))
     }
-
+*/
     this._addDivider()
     // Solo
     this._soloButton = this._addButton('Solo', this.toggleSolo.bind(this))
@@ -62,18 +63,19 @@ class Controls {
 
     // RESPONSE
     // Response Bars
-    this._addTitle('Response Bars:')
+    this._addTitle('Response')
     this._addDivider(8)
     this._responseBarButtons = []
     this._responseBarButtons.push(
 	this._addButton('Auto', this.setResponseBars.bind(this, 0)))
-
+/*
     for (var i = 1; i <= 8; i++) {
       this._responseBarButtons.push(
           this._addButton(i, this.setResponseBars.bind(this, i)))
     }
-
+*/
     this._addDivider()
+
 
     // Loop
     this._loopButton = this._addButton('Loop', this.toggleLoop.bind(this))
@@ -82,6 +84,7 @@ class Controls {
     this._mutateButton = this._addButton(
         'Mutate', this.triggerMutate.bind(this))
     this._addDivider()
+
     // Clear
     this._panicButton = this._addButton('Clear', this.triggerPanic.bind(this))
     this._addDivider()
