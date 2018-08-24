@@ -105,8 +105,10 @@ class Controls {
     }
     this._container.appendChild(document.createElement('br'))
 
+
     // TEMPERATURE
-    this._addTitle('Temperature:')
+      //this._addTitle('Temperature:')
+      this._addTitle('')
     this._addDivider(20)
     var temp = document.createElement('input')
     temp.classList.add('range')
