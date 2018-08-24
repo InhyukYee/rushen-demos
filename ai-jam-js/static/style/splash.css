@@ -222,7 +222,7 @@ $topMargin: 35px;
 		}
 
 		#aiExperiments {
-			background-image: url(../images/badgeAI_master.svg);
+			background-image: url(../images/badgeAI.svg);
 			&:hover {
 				opacity: 1;
 				&:active {
@@ -233,7 +233,7 @@ $topMargin: 35px;
 
 		#googleFriends {
 			cursor: initial;
-			background-image: url(../images/badgeFriends_master.svg);	
+			background-image: url(../images/badgeFriends.svg);	
 			margin-right: 0px;
 		}
 
@@ -262,7 +262,7 @@ $topMargin: 35px;
 			$imgSize : $badgeHeight;
 			$smallImg : $smallBadgeHeight;
 			#img {
-				background-image: url(../images/magenta_bw_logo.png);
+				background-image: url(../images/AIBRAIN_logo.png);
 				background-size: 90% 90%;
 				background-position: left center;
 				background-repeat: no-repeat;

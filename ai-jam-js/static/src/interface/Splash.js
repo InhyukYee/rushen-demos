@@ -34,13 +34,13 @@ class Splash extends events.EventEmitter{
 
 		const title = document.createElement('div')
 		title.id = 'title'
-		title.textContent = 'A.I. Jam'
+		title.textContent = 'AI Improvisation'
 		titleContainer.appendChild(title)
 
 		const subTitle = document.createElement('div')
 		subTitle.id = 'subTitle'
 		titleContainer.appendChild(subTitle)
-		subTitle.textContent = 'An interactive A.I. jam session.'
+		subTitle.textContent = 'An interactive AI Improvisation session.'
 
 		this._clicked = false
 		const loader = this._loader = new Loader(titleContainer)
@@ -64,7 +64,7 @@ class Splash extends events.EventEmitter{
 
 		const aiExperiments = document.createElement('a')
 		aiExperiments.id = 'aiExperiments'
-		aiExperiments.href = 'https://aiexperiments.withgoogle.com'
+		//aiExperiments.href = 'https://aiexperiments.withgoogle.com'
 		aiExperiments.target = '_blank'
 		aiExperiments.classList.add('badge')
 		badges.appendChild(aiExperiments)
@@ -85,19 +85,20 @@ class Splash extends events.EventEmitter{
 		badges.appendChild(break1)
 
 		const magenta = document.createElement('a')
-		magenta.href = 'https://magenta.tensorflow.org/'
+		magenta.href = 'https://aibrain.com/'
 		magenta.target = '_blank'
 		magenta.id = 'magentaLink'
 		magenta.classList.add('badge')
 		const imgHtml = '<div id="img"></div>'
-		magenta.innerHTML = imgHtml + '<div id="text">Built using <span>Magenta</span></div>'
+		magenta.innerHTML = imgHtml + '<div id="text">Made from <span>AIBRAIN</span></div>'
 		badges.appendChild(magenta)
 
+	    /*
 		const privacyAndTerms = document.createElement('div')
 		privacyAndTerms.id = 'privacyAndTerms'
 		privacyAndTerms.innerHTML = '<a target="_blank" href="https://www.google.com/intl/en/policies/privacy/">Privacy</a><span>&</span><a target="_blank" href="https://www.google.com/intl/en/policies/terms/">Terms</a>'
 		splash.appendChild(privacyAndTerms)
-
+	    */
 	}
 
 	get loaded(){

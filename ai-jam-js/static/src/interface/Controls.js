@@ -47,11 +47,13 @@ class Controls {
     this._addDivider(50)
     this._callBarButtons = []
     this._callBarButtons.push(
-      this._addButton('Auto', this.setCallBars.bind(this, 0)))
+	this._addButton('Auto', this.setCallBars.bind(this, 0)))
+
     for (var i = 1; i <= 8; i++) {
       this._callBarButtons.push(
           this._addButton(i, this.setCallBars.bind(this, i)))
     }
+
     this._addDivider()
     // Solo
     this._soloButton = this._addButton('Solo', this.toggleSolo.bind(this))
@@ -64,12 +66,15 @@ class Controls {
     this._addDivider(8)
     this._responseBarButtons = []
     this._responseBarButtons.push(
-      this._addButton('Auto', this.setResponseBars.bind(this, 0)))
+	this._addButton('Auto', this.setResponseBars.bind(this, 0)))
+
     for (var i = 1; i <= 8; i++) {
       this._responseBarButtons.push(
           this._addButton(i, this.setResponseBars.bind(this, i)))
     }
+
     this._addDivider()
+
     // Loop
     this._loopButton = this._addButton('Loop', this.toggleLoop.bind(this))
     this._addDivider()

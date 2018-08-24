@@ -68,7 +68,7 @@ const controls = new Controls(container, magenta, keyboard)
 
 magenta.on('active', () => {controls.reset()})
 
-const sound = new Sound()
+const sound = new Sound(magenta)
 sound.load()
 
 var isShifted = false
