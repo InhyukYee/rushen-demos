@@ -34,6 +34,7 @@ const BUNDLE_CC = 8
 const LOOP_CC = 10
 const PANIC_CC = 11
 const MUTATE_CC = 12
+const SHORT_CC = 13
 
 class MagentaInstance {
   constructor(portName, notifier, models){
@@ -43,7 +44,8 @@ class MagentaInstance {
     this._active = false
 
     this._temperature = 64,
-    this._isLooping = false
+      this._isLooping = false
+      this._isShort = false
     this._bundleIndex = 0
     this._soloMode = false
     this._callBars = 0
@@ -89,6 +91,20 @@ class MagentaInstance {
 
   isLooping() {
     return this._isLooping
+  }
+
+    isShort() {
+    return this._isShort
+  }
+
+ toggleShort() {
+    this._isShort = !this._isShort
+    if (this._isShort) {
+      this._notifier.notify('<b>Short </b> enabled')
+    } else {
+      this._notifier.notify('<b>Short </b> disabled')
+    }
+    this._toMagenta.sendControlChange(SHORT_CC, this._isShort * 127)
   }
 
   toggleLoop() {

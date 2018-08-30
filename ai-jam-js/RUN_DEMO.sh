@@ -12,7 +12,7 @@ midi_clock\
   --qpm=120 \
   --channel=0 \
   --clock_control_number=1 \
-  --log=INFO &
+  --log=DEBUG &
 MIDI_CLOCK=$!
 
 magenta_midi \
@@ -33,7 +33,7 @@ magenta_midi \
   --loop_control_number=10 \
   --panic_control_number=11 \
   --mutate_control_number=12 \
-  --log=INFO &
+  --log=DEBUG &
 MAGENTA_DRUMS=$!
 
 magenta_midi \
@@ -55,7 +55,8 @@ magenta_midi \
   --loop_control_number=10 \
   --panic_control_number=11 \
   --mutate_control_number=12 \
-  --log=INFO &
+  --short_control_number=13 \
+  --log=DEBUG &
 MAGENTA_PIANO=$!
 
 trap "kill ${WEB_SERVER} ${MIDI_CLOCK} ${MAGENTA_PIANO} ${MAGENTA_DRUMS}; exit 1" INT

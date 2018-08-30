@@ -57,7 +57,12 @@ class Controls {
 */
     this._addDivider()
     // Solo
-    this._soloButton = this._addButton('Solo', this.toggleSolo.bind(this))
+      this._soloButton = this._addButton('Solo', this.toggleSolo.bind(this))
+      this._addDivider()
+      
+    // Short
+      this._shortButton = this._addButton('Short', this.toggleShort.bind(this))
+            this._addDivider()
     this._container.appendChild(document.createElement('br'))
 
 
@@ -192,6 +197,11 @@ class Controls {
 
   toggleMetronome() {
     this._toggle(this._metronomeButton)
+  }
+
+  toggleShort() {
+    this._toggle(this._shortButton)
+    this._magenta.selected().toggleShort()
   }
 
   toggleLoop() {
