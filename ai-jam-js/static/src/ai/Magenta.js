@@ -22,7 +22,7 @@ const TO_MAGENTA_DRUMS_PORT_NAME = 'magenta_drums_in'
 
 const DRUM_MODELS = ['Drums']
 //const PIANO_MODELS = ['Attention', 'Pianoroll', 'Performance', 'Trio']
-const PIANO_MODELS = ['Melody', 'Roll', 'Dynamic', 'Trio']
+const PIANO_MODELS = ['Melody', 'Roll', 'Dynamic', 'Trio', 'Multitracks']
 
 // 0-based
 const CLOCK_CC = 1
@@ -84,8 +84,8 @@ class MagentaInstance {
 
   setBundleIndex(index){
       this._bundleIndex = index
-      var equal = (this._bundleIndex == 3) ? 'true' : 'false'
-      this._notifier.notify('<b>Model:</b> ' + this._models[index] + ', index:' + this._bundleIndex + ', ==3 ?:' + equal)
+      var equal = (this._bundleIndex == 4) ? 'true' : 'false'
+      this._notifier.notify('<b>Model:</b> ' + this._models[index] + ', index:' + this._bundleIndex + ', ==4 ?:' + equal)
     this._toMagenta.sendControlChange(BUNDLE_CC, index)
   }
 
