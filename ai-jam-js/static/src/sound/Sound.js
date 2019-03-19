@@ -53,7 +53,7 @@ class Sound {
 			if (drum) {
 			    this._drums.keyDown(note, time)
 			} else if (ai){
-			    if (this._magenta.selected().bundleIndex() == 3) {
+			    if (this._magenta.selected().bundleIndex() >= 3) {
 				this._mute.keyDown(note, time)
 			    }
 			    else {
@@ -71,7 +71,7 @@ class Sound {
 			if (drum) {
 			    this._drums.keyUp(note, time)
 			} else if (ai){
-			    if (this._magenta.selected().bundleIndex() == 3) {
+			    if (this._magenta.selected().bundleIndex() >= 3) {
 				this._mute.keyUp(note, time)
 			    }
 			    else {
